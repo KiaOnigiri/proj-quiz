@@ -1,0 +1,53 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическая викторина</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+    <div class="quiz-container" id="quizContainer">
+        <header class="quiz-header">
+            <h1>Космическая одиссея</h1>
+            <p class="quiz-subtitle">Покоритель галактик, проверь себя!</p>
+        </header>
+        <div class="progress-wrapper">
+            <div class="progress-info">
+                <span id="questionCounter">Вопрос 1 из 10</span>
+                <span id="scoreDisplay">Счёт: 0</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        <div class="question-card" id="questionCard">
+            <h2 class="question-text" id="questionText">Загрузка вопроса...</h2>
+            <div class="answers-grid" id="answersGrid">
+            </div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+        <button class="btn btn-results hidden" id="btnResults">
+            Результаты миссии
+        </button>
+    </div>
+    <div class="results-container hidden" id="resultsContainer">
+        <div class="results-card">
+            <div class="results-icon" id="resultsEmoji">🌌</div>
+            <h2 class="results-title">Викторина завершена!</h2>
+            <div class="results-score-circle" id="scoreCircle">
+                <span class="score-number" id="finalScore">0</span>
+                <span class="score-label">из 10</span>
+            </div>
+            <p class="results-message" id="resultsMessage"></p>
+            <div class="results-details" id="resultsDetails"></div>
+            <button class="btn btn-restart" id="btnRestart">
+                Запустить новый двигатель
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
